@@ -47,6 +47,7 @@ return (function () {
             logNone : logNone,
             logger : null,
             config : {
+                immediate: false,
                 historyEnabled:true,
                 historyCacheSize:10,
                 refreshOnHistoryMiss:false,
@@ -3809,7 +3810,7 @@ return (function () {
         //====================================================================
         // Initialization
         //====================================================================
-        var isReady = false
+        var isReady = htmx.config.immediate
         getDocument().addEventListener('DOMContentLoaded', function() {
             isReady = true
         })

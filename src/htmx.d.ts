@@ -292,6 +292,11 @@ export const version: string;
 
 export interface HtmxConfig {
     /**
+     * If htmx should run immediately after htmx script is loaded
+     * @default false
+     */
+        immediate?: boolean
+    /**
      * The attributes to settle during the settling phase.
      * @default ["class", "style", "width", "height"]
      */
